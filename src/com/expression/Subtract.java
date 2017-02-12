@@ -1,15 +1,15 @@
-package com.calculator;
+package com.expression;
 
-public class Add implements Operator {
+public class Subtract implements Operator {
 
 	@Override
 	public double compute(double operand1, double operand2) {
-		return operand1 + operand2;
+		return operand1 - operand2;
 	}
 
 	@Override
 	public int getPrecedance() {
-		return 20;
+		return 10;
 	}
 
 }

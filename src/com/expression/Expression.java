@@ -1,4 +1,4 @@
-package com.calculator;
+package com.expression;
 
 import java.util.LinkedList;
 import java.util.Queue;

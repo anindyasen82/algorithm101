@@ -1,8 +1,10 @@
-package com.calculator;
+package com.expression;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.expression.Expression;
 
 public class ExpressionTest {
 
