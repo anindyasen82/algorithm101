@@ -13,6 +13,10 @@ public class Expression {
 	}
 
 	private Queue<Object> infixToPostfix(String expression) {
+		if(expression == null || expression.length() == 0) {
+			return null;
+		}
+		
 		Queue<Object> postfix = new LinkedList<Object>();
 		Stack<Operator> operator = new Stack<Operator>();
 		StringBuilder operandBuilder = new StringBuilder();
@@ -34,7 +38,6 @@ public class Expression {
 		}
 		if(operandBuilder.length() > 0) {
 			postfix.add(new Double(operandBuilder.toString()));
-			operandBuilder = new StringBuilder();
 		}
 		while (!operator.isEmpty()) {
 			postfix.add(operator.pop());
@@ -46,6 +49,10 @@ public class Expression {
 	}
 
 	private TreeNode constructTree(Queue<Object> postfix) {
+		if(postfix == null || postfix.isEmpty()) {
+			return null;
+		}
+		
 		Stack<TreeNode> st = new Stack<TreeNode>();
 		TreeNode t;
 

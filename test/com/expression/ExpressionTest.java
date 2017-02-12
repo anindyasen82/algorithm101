@@ -89,11 +89,22 @@ public class ExpressionTest {
 		
 	}
 
-	@Test(expected = RuntimeException.class)
+	@Test
+	public void testForEmpty() {
+		String input = "";
+		Expression expression = new Expression(input);
+		double result = expression.evaluate();
+		assertEquals(0, result, 0);
+	}
+
+	@Test
 	public void testForInvalidOperator() {
 		String input = "1.5+2~5/2-1.9";
-		new Expression(input);
-		
+		try {
+			new Expression(input);
+		} catch (Exception e) {
+			assertTrue(e instanceof RuntimeException);
+		}
 	}
 
 }
