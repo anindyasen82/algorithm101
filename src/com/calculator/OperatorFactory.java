@@ -2,7 +2,7 @@ package com.calculator;
 
 public class OperatorFactory {
 	
-	public static Operator createOperator(char c) throws Exception {
+	public static Operator createOperator(char c) {
 		Operator operator = null;
 		switch (c) {
 			case '+':
@@ -22,7 +22,7 @@ public class OperatorFactory {
 				break;
 	
 			default:
-				throw new Exception("Unsupported operator");
+				throw new RuntimeException("Unsupported operator");
 		}
 		
 		return operator;

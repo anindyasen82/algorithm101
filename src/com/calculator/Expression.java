@@ -8,24 +8,33 @@ public class Expression {
 
 	private TreeNode root;
 
-	public Expression(String expression) throws Exception {
+	public Expression(String expression) {
 		root = constructTree(infixToPostfix(expression));
 	}
 
-	private Queue<Object> infixToPostfix(String expression) throws Exception {
+	private Queue<Object> infixToPostfix(String expression) {
 		Queue<Object> postfix = new LinkedList<Object>();
 		Stack<Operator> operator = new Stack<Operator>();
+		StringBuilder operandBuilder = new StringBuilder();
 		for (int i = 0; i < expression.length(); i++) {
 			char ch = expression.charAt(i);
-			if (ch >= '0' && ch <= '9') { // supports only integer (0-9)
-				postfix.add(new Double(ch - '0'));
+			if ((ch >= '0' && ch <= '9') || (ch == '.')) { // operand found
+				operandBuilder.append(ch);
 			} else {
+				if(operandBuilder.length() > 0) {
+					postfix.add(new Double(operandBuilder.toString()));
+					operandBuilder = new StringBuilder();
+				}
 				Operator currentOperator = OperatorFactory.createOperator(ch);
 				while (!operator.isEmpty() && operator.peek().getPrecedance() >= currentOperator.getPrecedance()) {
 					postfix.add(operator.pop());
 				}
 				operator.push(currentOperator);
 			}
+		}
+		if(operandBuilder.length() > 0) {
+			postfix.add(new Double(operandBuilder.toString()));
+			operandBuilder = new StringBuilder();
 		}
 		while (!operator.isEmpty()) {
 			postfix.add(operator.pop());
