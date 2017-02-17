@@ -36,18 +36,18 @@ public class IslandCounter {
 			boolean yCoordinateRange = false;
 			
 			int currentXRangeMin = x - 1;
-			int currentXRangeMax = x + 1;
+			int currentXRangeMax = x;
 			
 			int currentYRangeMin = y - 1;
-			int currentYRangeMax = y + 1;
+			int currentYRangeMax = y;
 			
-			for(int xRange = currentXRangeMin; xRange <= currentXRangeMax; xRange++) { // Fixed time complexity O(3) => O(1)
+			for(int xRange = currentXRangeMin; xRange <= currentXRangeMax; xRange++) { // Fixed time complexity O(2) => O(1)
 				if(island.isXCoordinateExists(xRange)) {
 					xCoordinateInRange = true;
 					break;
 				}
 			}
-			for(int yRange = currentYRangeMin; yRange <= currentYRangeMax; yRange++) { // Fixed time complexity O(3) => O(1)
+			for(int yRange = currentYRangeMin; yRange <= currentYRangeMax; yRange++) { // Fixed time complexity O(2) => O(1)
 				if(island.isYCoordinateExists(yRange)) {
 					yCoordinateRange = true;
 					break;
