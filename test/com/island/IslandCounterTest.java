@@ -1,9 +1,11 @@
-package com.Island;
+package com.island;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.island.IslandCounter;
 
 public class IslandCounterTest {
 	
