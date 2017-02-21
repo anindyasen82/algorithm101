@@ -33,3 +33,21 @@ LRU Cache implementation
 
 **package:**  com.cache
 
+### 7. Excel column name:
+MS Excel columns has a pattern like A, B, C, … ,Z, AA, AB, AC,… , AZ, BA, BB, … ZZ, AAA, AAB etc. In other words, column 1 is named as "A", column 2 as "B", column 27 as "AA".
+
+Given a column number, generate its corresponding Excel column name. Following are more examples:
+
+    Input  Output
+     26 	Z
+     51 	AY
+     52 	AZ
+     80 	CB
+     676	YZ
+     700	ZX
+     702	ZZ
+     705	AAC
+
+
+**package:**  com.excel
+
