@@ -1,8 +1,6 @@
 package com.stack;
 
-import static org.junit.Assert.*;
-
-import java.util.Iterator;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
