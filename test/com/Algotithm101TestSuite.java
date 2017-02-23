@@ -12,6 +12,7 @@ import com.permutation.impl.PermutationProviderMapImplTest;
 import com.sort.impl.InsertionSortTest;
 import com.sort.impl.MergerSortTest;
 import com.stack.MaxValueStackTest;
+import com.subarray.MaxSubArrayCalculatorTest;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	LRUCacheTest.class,
@@ -22,7 +23,8 @@ import com.stack.MaxValueStackTest;
 	PermutationProviderMapImplTest.class,
 	InsertionSortTest.class,
 	MergerSortTest.class,
-	MaxValueStackTest.class
+	MaxValueStackTest.class,
+	MaxSubArrayCalculatorTest.class
 })
 
 public class Algotithm101TestSuite {
