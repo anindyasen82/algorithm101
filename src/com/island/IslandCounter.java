@@ -5,23 +5,23 @@ import java.util.List;
 
 public class IslandCounter {
 	
-	private List<Island> islands = new ArrayList<Island>();
-	
 	public int count(int[][] world) {
 		if(world == null || world.length == 0) {
 			return 0;
 		}
-		
+
+		List<Island> islands = new ArrayList<Island>();
+
 		for (int x = 0; x < world.length; x++) {
 			int[] currentRow = world[x];
 			for (int y = 0; y < currentRow.length; y++) {
 				if(currentRow[y] == 1) { // found land
-					Island adjecentIsland = findAdjecentIsland(x, y);
-					if(adjecentIsland == null) {
-						adjecentIsland = new Island();
-						adjecentIsland.addXCoordinate(x);
-						adjecentIsland.addYCoordinate(y);
-						islands.add(adjecentIsland);
+					Island adjacentIsland = findAdjacentIsland(islands, x, y);
+					if(adjacentIsland == null) {
+						adjacentIsland = new Island();
+						adjacentIsland.addXCoordinate(x);
+						adjacentIsland.addYCoordinate(y);
+						islands.add(adjacentIsland);
 					}
 				}
 			}
@@ -30,7 +30,7 @@ public class IslandCounter {
 		return islands.size();
 	}
 
-	private Island findAdjecentIsland(int x, int y) {
+	private Island findAdjacentIsland(List<Island> islands, int x, int y) {
 		for(Island island : islands) {
 			boolean xCoordinateInRange = false;
 			boolean yCoordinateRange = false;

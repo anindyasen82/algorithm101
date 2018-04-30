@@ -51,3 +51,8 @@ Given a column number, generate its corresponding Excel column name. Following a
 
 **package:**  com.excel
 
+### 8. Find duplicate:
+Find duplicate entries in a given integer array.
+
+**package:**  com.dup
+
