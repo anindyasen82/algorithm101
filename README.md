@@ -56,3 +56,10 @@ Find duplicate entries in a given integer array.
 
 **package:**  com.dup
 
+### 9. Expense calculator:
+n number of friends went for a trip. Each person spent money on the trip. At the end of the trip they want to settle
+the expense. Write a method that take the expenses as input and return the list of settlement transactions so that
+number of settlement transaction should not exceed n
+
+**package:**  com.expense
+
