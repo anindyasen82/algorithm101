@@ -9,6 +9,10 @@ public class SettlementHandler {
     public List<Settlement> handle(List<Expense> expenses) {
         List<Settlement> settlements = new LinkedList<>();
 
+        if(expenses == null) {
+            return settlements;
+        }
+
         double expenseAmountPerPerson = calculateExpenseAmountPerPerson(expenses);
 
         List<Expense> receivables = expenses.stream().filter(expense -> expense.getTotalAmountSpent() > expenseAmountPerPerson).collect(Collectors.toList());
