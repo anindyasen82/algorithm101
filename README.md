@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/anindyasen82/algorithm101.svg?style=svg)](https://circleci.com/gh/anindyasen82/algorithm101)
+
 # algorithm101
 Solution to different algorithm problems
 
