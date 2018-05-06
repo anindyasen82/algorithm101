@@ -214,7 +214,7 @@ public class SettlementHandlerTest {
     public void handleNullExpense() throws Exception {
         List<Settlement> settlements = handler.handle(null);
 
-        assertEquals(0, settlements.size());
+        assertEquals(1, settlements.size());
 
     }
 
