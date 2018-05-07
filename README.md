@@ -65,3 +65,8 @@ number of settlement transaction should not exceed n
 
 **package:**  com.expense
 
+### 10. Combination calculator:
+Given two int '_n_' and '_r_', find how many ways you can select '_r_' items out of '_n_'.
+
+**package:**  com.combination
+
