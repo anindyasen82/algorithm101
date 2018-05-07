@@ -45,7 +45,7 @@ jobs:
           name: Save test coverage
           command: |
             mkdir -p ~/junit/
-            find . -type f -regex ".*/target/site/.*xml" -exec cp {} ~/junit/ \;
+            find . -type f -regex ".*/target/site/jacoco-ut/.*xml" -exec cp {} ~/junit/ \;
           when: always
       - store_test_results:
           path: ~/junit
