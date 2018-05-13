@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/anindyasen82/algorithm101.svg?style=svg)](https://circleci.com/gh/anindyasen82/algorithm101)
 
+[![Coverage Status](https://coveralls.io/repos/github/anindyasen82/algorithm101/badge.svg?branch=master)](https://coveralls.io/github/anindyasen82/algorithm101?branch=master)
+
 # algorithm101
 Solution to different algorithm problems
 
