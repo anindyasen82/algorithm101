@@ -70,3 +70,8 @@ Given two int '_n_' and '_r_', find how many ways you can select '_r_' items out
 
 **package:**  com.combination
 
+### 11. Predictive Search:
+Predictive search in sorted List of String.
+
+**package:**  com.predictivesearch
+
