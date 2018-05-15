@@ -8,7 +8,7 @@ public class Multiply implements Operator {
 	}
 
 	@Override
-	public int getPrecedance() {
+	public int getPrecedence() {
 		return 30;
 	}
 

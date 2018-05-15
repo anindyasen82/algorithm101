@@ -30,7 +30,7 @@ public class Expression {
 					operandBuilder = new StringBuilder();
 				}
 				Operator currentOperator = OperatorFactory.createOperator(ch);
-				while (!operator.isEmpty() && operator.peek().getPrecedance() >= currentOperator.getPrecedance()) {
+				while (!operator.isEmpty() && operator.peek().getPrecedence() >= currentOperator.getPrecedence()) {
 					postfix.add(operator.pop());
 				}
 				operator.push(currentOperator);
