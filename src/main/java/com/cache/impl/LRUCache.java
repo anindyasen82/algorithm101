@@ -13,7 +13,7 @@ public class LRUCache implements Cache {
 
 	public LRUCache(int capacity) {
 		this.capacity = capacity;
-		map = new HashMap<Integer, Node>(capacity);
+		map = new HashMap<>(capacity);
 	}
 
 	@Override

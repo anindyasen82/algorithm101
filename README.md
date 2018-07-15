@@ -77,3 +77,8 @@ Predictive search in sorted List of String.
 
 **package:**  com.predictivesearch
 
+### 12. Shortest path in maze:
+A maze(M) is represented by n-by-n matrix, each cell has a value of either 0 or 1. A cell indicates a wall if its value is 1. give the length of the shortest path from M[0][0] to M[n-1][n-1]. You can move either up, down, left or right
+
+**package:**  com.maze
+

@@ -2,8 +2,8 @@ package com.cache;
 
 public interface Cache {
 	
-	public int get(int key);
+	int get(int key);
 	
-	public void set(int key, int value);
+	void set(int key, int value);
 
 }

@@ -39,7 +39,7 @@ public class LRUCacheTest {
 	}
 
 	@Test
-	public void testEvictOnContinousSetMoreThanCapacity() {
+	public void testEvictOnContinuousSetMoreThanCapacity() {
 		cache.set(1, 11);
 		cache.set(2, 22);
 		cache.set(3, 33);
